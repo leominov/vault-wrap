@@ -14,7 +14,6 @@ var (
 	AuthMethod = flag.String("method", "ldap", "Auth method")
 	VaultAddr  = flag.String("vault", "", "Vault's address")
 	WrapTTL    = flag.Duration("wrap-ttl", 5*time.Minute, "")
-	Read       = flag.Bool("read", false, "Read data")
 )
 
 func NewClient(addr, user, pass, authMethod string) (*api.Client, []string, error) {
