@@ -38,6 +38,7 @@ func NewClient(addr, user, pass, authMethod string) (*api.Client, []string, erro
 }
 
 func DefaultWrappingLookupFunc(operation, path string) string {
+	fmt.Println(operation, path)
 	if *WrapTTL != 0 {
 		return WrapTTL.String()
 	}
