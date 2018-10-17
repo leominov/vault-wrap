@@ -12,8 +12,9 @@ var (
 	Login      = flag.String("login", "", "User's login")
 	Password   = flag.String("password", "", "User's password")
 	AuthMethod = flag.String("method", "ldap", "Auth method")
-	VaultAddr  = flag.String("vault", "https://vault.tcsbank.ru", "Vault's address")
+	VaultAddr  = flag.String("vault", "", "Vault's address")
 	WrapTTL    = flag.Duration("wrap-ttl", 5*time.Minute, "")
+	Read       = flag.Bool("read", false, "Read data")
 )
 
 func NewClient(addr, user, pass, authMethod string) (*api.Client, []string, error) {
