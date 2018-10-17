@@ -13,7 +13,7 @@ var (
 	Password   = flag.String("password", "", "User's password")
 	AuthMethod = flag.String("method", "ldap", "Auth method")
 	VaultAddr  = flag.String("vault", "", "Vault's address")
-	WrapTTL    = flag.Duration("wrap-ttl", 5*time.Minute, "")
+	WrapTTL    = flag.Duration("wrap-ttl", 5*time.Minute, "Wrap TTL")
 )
 
 func NewClient(addr, user, pass, authMethod string) (*api.Client, []string, error) {
